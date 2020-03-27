@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bulma": "^0.8.1",
     "dotenv": "^8.2.0",
     "netlify-lambda": "^1.6.3",
     "twilio": "^3.41.1"
