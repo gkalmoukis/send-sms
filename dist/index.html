@@ -82,7 +82,7 @@
                 <div class="field-body">
                   <div class="field">
                     <p class="control is-expanded has-icons-left">
-                      <input class="input" type="text" placeholder="First name">
+                      <input class="input" type="text" name="firstname" placeholder="First name">
                       <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                       </span>
@@ -90,7 +90,7 @@
                   </div>
                   <div class="field">
                     <p class="control is-expanded has-icons-left">
-                      <input class="input" type="text" placeholder="Lasr name">
+                      <input class="input" type="text" name="lastname" placeholder="Last name">
                       <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                       </span>
@@ -109,7 +109,7 @@
                         </a>
                       </p>
                       <p class="control is-expanded">
-                        <input class="input" type="tel" placeholder="Your phone number">
+                        <input class="input" name="phone" type="tel" placeholder="Your phone number">
                       </p>
                     </div>
                     <p class="help">Do not enter the first zero</p>
@@ -140,33 +140,33 @@
                   <div class="field is-narrow">
                     <div class="control">
                       <label class="radio">
-                        <input type="radio" name="reason">
-                        Going to the pharmacy or visiting a Medical Doctor, in the case that this is recommended after consultation.
+                        <input type="radio" value="1" name="reason">
+                        Going to the pharmacy or visiting a Medical Doctor.
                       </label> 
                       <br>
                       <label class="radio">
-                        <input type="radio" name="reason">
-                        Going to a supply store in operation (super markets, mini markets etc), which can not ship or deliver its goods.
+                        <input type="radio" value="2" name="reason">
+                        Going to a supply store in operation (super markets, mini markets etc).
                       </label>
                       <br>
                       <label class="radio">
-                        <input type="radio" name="reason">
+                        <input type="radio" value="3" name="reason">
                         Going to the bank, when electronic transactions are not possible.
                       </label>
                       <br>
                       <label class="radio">
-                        <input type="radio" name="reason">
+                        <input type="radio" value="4" name="reason">
                         Going to help people in need.
                       </label>
                       <br>
                       <label class="radio">
-                        <input type="radio" name="reason">
-                        Going to a ceremony (e.g., funeral, marriage, baptism) under the conditions provided by law; or movement of divorced or legally separated parents in the context of parental responsibility, custody, or visiting rights in accordance with the applicable provisions.
+                        <input type="radio" value="5" name="reason">
+                        Going to a ceremony.
                       </label>
                       <br>
                       <label class="radio">
-                        <input type="radio" name="reason">
-                        Physical exercise in an open space or for a pet’s needs; individually or up to 2 people. In the latter case, a minimum distance of 1.5 meters must be kept at all times.
+                        <input type="radio" value="6" name="reason">
+                        Physical exercise in an open space or for a pet’s needs
                       </label>
                     </div>
                   </div>
@@ -193,13 +193,11 @@
               </div>
               
               <div class="field is-horizontal">
-                <div class="field-label">
-                  <!-- Left empty for spacing -->
-                </div>
+                
                 <div class="field-body">
                   <div class="field">
                     <div class="control">
-                      <button class="button is-primary">
+                      <button type="submit" class="button is-primary">
                         Send message
                       </button>
                     </div>
