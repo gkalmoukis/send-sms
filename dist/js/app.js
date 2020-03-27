@@ -17,6 +17,7 @@ const form = document.querySelector('form');
         // parse and submit all included form data
         body: new URLSearchParams(new FormData(form)).toString()
       });
+      
       console.log(form);
       // if it was successful show success message
       if (response.status === 200) {
