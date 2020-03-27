@@ -13,8 +13,10 @@ const {
 const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 exports.handler = function(event, context, callback) {
-  console.log(context);
   
+  console.log(event);
+  console.log(context.queryStringParameters);
+
   Promise.all(
     // split the string of several messages into single numbers
     // send message to each of them
