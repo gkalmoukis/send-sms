@@ -23,7 +23,7 @@ exports.handler = function(event, context, callback) {
   const notes = event.queryStringParameters.name || "";
 
 
-  console.log(`${reason} ${fisrtname.toUperCase()} ${lastname.toUperCase()} ${address.toUperCase()}, ${city.toUperCase()}`);
+  console.log(`${reason} ${fisrtname.toUpperCase()} ${lastname.toUpperCase()} ${address.toUpperCase()}, ${city.toUpperCase()}`);
 
   Promise.all(
     // split the string of several messages into single numbers
