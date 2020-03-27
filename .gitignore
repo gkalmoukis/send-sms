@@ -1,3 +1,4 @@
 # .gitignore
 # generated functions
 .functions
+node_modules/
