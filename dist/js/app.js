@@ -5,7 +5,7 @@ form.addEventListener('submit', async event => {
 
     // make the request to submit the form
     try {
-      const response = await fetch('/', {
+      const response = await fetch('http://localhost:8888 /', {
         method: 'post',
         headers: {
           'Content-type': 'application/x-www-form-urlencoded; charset=UTF-8'

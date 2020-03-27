@@ -14,6 +14,9 @@ const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 exports.handler = function(event, context, callback) {
   
+
+  console.log(event.queryStringParameters.fisrtname);
+
   const fisrtname = event.queryStringParameters.fisrtname || "EXAMPLE";
   const lastname = event.queryStringParameters.lastname || "NAME";
   const address = event.queryStringParameters.address || "STREET 12";
@@ -22,7 +25,7 @@ exports.handler = function(event, context, callback) {
   const phone  = event.queryStringParameters.phone || "0000000000";
   const notes = event.queryStringParameters.notes || "";
 
-  console.log(fisrtname);
+  
 
   console.log(`${reason} ${fisrtname.toUpperCase()} ${lastname.toUpperCase()} ${address.toUpperCase()}, ${city.toUpperCase()}`);
 
