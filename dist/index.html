@@ -93,7 +93,7 @@
 
 
           <section class="section" >
-            <form name="sms_form" class="form" method="POST" data-netlify="true"></form>
+            <form name="sms" class="form" method="POST" data-netlify="true">
             <div class="field is-horizontal">
                 
                 <div class="field-body">
@@ -109,7 +109,29 @@
                     <p class="control is-expanded has-icons-left">
                       <input class="input" type="text" name="lastname" placeholder="Last name">
                       <span class="icon is-small is-left">
-                        <i class="fas fa-user"></i>
+                        <i class="far fa-user"></i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field is-horizontal">
+                
+                <div class="field-body">
+                  <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                      <input class="input" type="text" name="address" placeholder="Street name and number">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-building"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                      <input class="input" type="text" name="city" placeholder="City">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-city"></i>
                       </span>
                     </p>
                   </div>
@@ -225,6 +247,6 @@
           </section>
 
           
-          <script src="js/app.js"></script>
+          <script src="./js/app.js"></script>
   </body>
 </html>

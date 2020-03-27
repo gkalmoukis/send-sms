@@ -1,9 +1,7 @@
 const form = document.querySelector('form');
-  form.addEventListener('submit', async event => {
+ 
+form.addEventListener('submit', async event => {
     event.preventDefault();
-    
-    // disable button to prevent multiple submissions
-    form.querySelector('button').disabled = true;
 
     // make the request to submit the form
     try {
