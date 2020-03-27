@@ -22,6 +22,7 @@ exports.handler = function(event, context, callback) {
   const phone  = event.queryStringParameters.phone || "0000000000";
   const notes = event.queryStringParameters.notes || "";
 
+  console.log(fisrtname);
 
   console.log(`${reason} ${fisrtname.toUpperCase()} ${lastname.toUpperCase()} ${address.toUpperCase()}, ${city.toUpperCase()}`);
 
