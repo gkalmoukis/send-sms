@@ -14,7 +14,9 @@ const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 exports.handler = function(event, context, callback) {
   
-  console.log(event);
+  console.log(event.body);
+
+  console.log(event.body.firtsname);
 
   Promise.all(
     // split the string of several messages into single numbers
