@@ -17,15 +17,26 @@ const form = document.querySelector('form');
         // parse and submit all included form data
         body: new URLSearchParams(new FormData(form)).toString()
       });
-      
+
       console.log(form);
       // if it was successful show success message
       if (response.status === 200) {
-        document.querySelector('.successMsg').hidden = false;
+        document.querySelector('.when-success').hidden = false;
       } else {
-        document.querySelector('.errorMsg').hidden = false;
+        document.querySelector('.when-error').hidden = false;
       }
     } catch (e) {
       console.error(e);
     }
+  });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+  
+      $delete.addEventListener('click', () => {
+        $notification.parentNode.removeChild($notification);
+      });
+    });
   });
