@@ -14,13 +14,13 @@ const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 exports.handler = function(event, context, callback) {
   
-  const fisrtname = event.queryStringParameters.name || "EXAMPLE";
-  const lastname = event.queryStringParameters.name || "NAME";
-  const address = event.queryStringParameters.name || "STREET 12";
-  const city = event.queryStringParameters.name || "CITY";
-  const reason = event.queryStringParameters.name || "1";
-  const phone  = event.queryStringParameters.name || "0000000000";
-  const notes = event.queryStringParameters.name || "";
+  const fisrtname = event.queryStringParameters.fisrtname || "EXAMPLE";
+  const lastname = event.queryStringParameters.lastname || "NAME";
+  const address = event.queryStringParameters.address || "STREET 12";
+  const city = event.queryStringParameters.city || "CITY";
+  const reason = event.queryStringParameters.reason || "1";
+  const phone  = event.queryStringParameters.phone || "0000000000";
+  const notes = event.queryStringParameters.notes || "";
 
 
   console.log(`${reason} ${fisrtname.toUpperCase()} ${lastname.toUpperCase()} ${address.toUpperCase()}, ${city.toUpperCase()}`);
