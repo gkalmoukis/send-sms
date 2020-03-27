@@ -14,24 +14,33 @@ const client = require('twilio')(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
 exports.handler = function(event, context, callback) {
   
-  console.log(event.body);
+  const fisrtname = event.queryStringParameters.name || "EXAMPLE";
+  const lastname = event.queryStringParameters.name || "NAME";
+  const address = event.queryStringParameters.name || "STREET 12";
+  const city = event.queryStringParameters.name || "CITY";
+  const reason = event.queryStringParameters.name || "1";
+  const phone  = event.queryStringParameters.name || "0000000000";
+  const notes = event.queryStringParameters.name || "";
 
-  console.log(event.body.firtsname);
+
+  console.log(`${reason} ${fisrtname.toUperCase()} ${lastname.toUperCase()} ${address.toUperCase()}, ${city.toUperCase()}`);
 
   Promise.all(
     // split the string of several messages into single numbers
     // send message to each of them
     CONTACT_NUMBERS.split(';').map(num => {
-      return client.messages.create({
-        from: BOT_NUMBER,
-        to: num,
-        body: BOT_MESSAGE
-      });
-    })
-  )
+        return client.messages.create({
+          from: BOT_NUMBER,
+          to: num,
+          body: BOT_MESSAGE
+        });
+      })
+    )
     .then(() => callback(null, { statusCode: 200, body: 'Created' }))
+    
     .catch(e => {
       console.log(e);
       callback(e);
     });
-};
+
+  };
